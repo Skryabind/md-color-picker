@@ -461,6 +461,7 @@ angular.module('mdColorPicker', [])
 				mdColorHex: '=?',
 				mdColorRgb: '=?',
 				mdColorHsl: '=?',
+				mdTabsPanel: '=?',
 				mdColorDefaultTab: '=?'
 			},
 			controller: ['$scope', '$element', '$attrs', '$mdDialog', '$mdColorPicker', function( $scope, $element, $attrs, $mdDialog, $mdColorPicker ) {
@@ -506,6 +507,7 @@ angular.module('mdColorPicker', [])
 				$scope.mdColorHex = $scope.mdColorHex === undefined ? true : $scope.mdColorHex;
 				$scope.mdColorRgb = $scope.mdColorRgb === undefined ? true : $scope.mdColorRgb;
 				$scope.mdColorHsl = $scope.mdColorHsl === undefined ? true : $scope.mdColorHsl;
+				$scope.mdTabsPanel = $scope.mdTabsPanel === undefined ? true : $scope.mdTabsPanel;
 				// Set the starting value
 				updateValue();
 
@@ -553,6 +555,7 @@ angular.module('mdColorPicker', [])
 						mdColorHex: $scope.mdColorHex,
 						mdColorRgb: $scope.mdColorRgb,
 						mdColorHsl: $scope.mdColorHsl,
+						mdTabsPanel: $scope.mdTabsPanel,
 						mdColorDefaultTab: $scope.mdColorDefaultTab,
 
 						$event: $event,
@@ -581,6 +584,7 @@ angular.module('mdColorPicker', [])
 				mdColorAlphaChannel: '=',
 				mdColorSpectrum: '=',
 				mdColorSliders: '=',
+				mdTabsPanel: '=',
 				mdColorGenericPalette: '=',
 				mdColorMaterialPalette: '=',
 				mdColorHistory: '=',
@@ -880,6 +884,7 @@ angular.module('mdColorPicker', [])
 				options.mdColorHistory = options.mdColorHistory === undefined ? true : options.mdColorHistory;
 				options.mdColorRgb = options.mdColorRgb === undefined ? true : options.mdColorRgb;
 				options.mdColorHsl = options.mdColorHsl === undefined ? true : options.mdColorHsl;
+				options.mdTabsPanel = options.mdTabsPanel === undefined ? true : options.mdTabsPanel;
 				options.mdColorHex = ((options.mdColorHex === undefined) || (!options.mdColorRgb && !options.mdColorHsl))  ? true : options.mdColorHex;
 				options.mdColorAlphaChannel = (!options.mdColorRgb && !options.mdColorHsl) ? false : options.mdColorAlphaChannel;
 
@@ -915,6 +920,7 @@ angular.module('mdColorPicker', [])
 							$scope.mdColorHex = options.mdColorHex;
 							$scope.mdColorRgb = options.mdColorRgb;
 							$scope.mdColorHsl = options.mdColorHsl;
+							$scope.mdTabsPanel = options.mdTabsPanel;
 							$scope.mdColorDefaultTab = options.mdColorDefaultTab;
 
 					}],
